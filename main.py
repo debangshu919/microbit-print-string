@@ -64,33 +64,8 @@ def on_logo_pressed():
 input.on_logo_event(TouchButtonEvent.PRESSED, on_logo_pressed)
 
 name = ""
-index = -1
 length = 0
-chars: List[str] = []
-chars = ["A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z"]
+index = 0
+index = -1
+chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 length = len(chars)

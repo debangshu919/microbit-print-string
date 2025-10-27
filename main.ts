@@ -1,14 +1,11 @@
-input.onButtonPressed(Button.A, function on_button_pressed_a() {
-    
+input.onButtonPressed(Button.A, function () {
     if (index <= 0) {
         index = length
     }
-    
     index = index - 1
-    basic.showString("" + chars[index])
+    basic.showString("" + (chars[index]))
 })
-input.onGesture(Gesture.ScreenDown, function on_gesture_screen_down() {
-    
+input.onGesture(Gesture.ScreenDown, function () {
     name = ""
     index = 0
     basic.showIcon(IconNames.Square)
@@ -41,29 +38,27 @@ input.onGesture(Gesture.ScreenDown, function on_gesture_screen_down() {
     basic.pause(1000)
     basic.clearScreen()
 })
-input.onButtonPressed(Button.AB, function on_button_pressed_ab() {
+input.onButtonPressed(Button.AB, function () {
     basic.clearScreen()
 })
-input.onButtonPressed(Button.B, function on_button_pressed_b() {
-    
+input.onButtonPressed(Button.B, function () {
     index += 1
     if (index >= length) {
         index = 0
     }
-    
-    basic.showString("" + chars[index])
+    basic.showString("" + (chars[index]))
 })
-input.onGesture(Gesture.Shake, function on_gesture_shake() {
+input.onGesture(Gesture.Shake, function () {
     basic.showString(name)
 })
-input.onLogoEvent(TouchButtonEvent.Pressed, function on_logo_pressed() {
-    
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     name = "" + name + chars[index]
     basic.showIcon(IconNames.Yes)
 })
 let name = ""
-let index = -1
 let length = 0
-let chars : string[] = []
-chars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+let chars = ""
+let index = 0
+index = -1
+chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 length = chars.length
